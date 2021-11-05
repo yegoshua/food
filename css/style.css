@@ -40,6 +40,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 body{
     font-family: 'Roboto', sans-serif;
+    height: 100%;
+	width: 100%;
 }
 .container{
     max-width: 1194px;
@@ -88,6 +90,11 @@ body{
     font-size: 14px;
     line-height: 16px;
     color: black;
+    transition: 0.5s;
+}
+.login:hover{
+    color:#F66A15;
+    border-bottom: 1px solid #F66A15;
 }
 .cart {
     display: flex;
@@ -151,6 +158,10 @@ body{
 .button-primary {
     background-color: #F47322;
     color: #ffff;
+    transition: 0.5s;
+}
+.button-primary:hover{
+    background-color: #aa470a;
 }
 .button-default{
     background-color: #ffff;
@@ -159,6 +170,18 @@ body{
 
 .slide-summer{
     background-image: url("../img/summer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.slide-authmn{
+    background-image: url("../img/authmn.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.slide-vitamin{
+    background-image: url("../img/vitamin.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -175,7 +198,22 @@ body{
     height: 100%;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.43) 40.45%, rgba(0, 0, 0, 0) 100%);
 }
-
+.swiper{
+    position: relative;
+}
+.slider-buttons{
+    display: flex;
+    position: absolute;
+    right: 46px;
+    bottom: 40px;
+    z-index: 3;
+    align-items: center;
+    width: 100px;
+    justify-content: space-between;
+}
+.slider-button {
+    cursor: pointer;
+}
 .promo {
     padding: 50px 0;
     display: flex;
@@ -480,4 +518,104 @@ body{
 .social-link {
     margin-left: 20px;
     text-decoration: none;
+}
+
+
+@media (max-width:1260px) {
+    .container{
+        max-width: 960px;
+    }
+    .search-form{
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    .tabs-content{
+        flex-wrap: wrap;
+    }
+
+    .tabs-card{
+        flex: 50%;
+        max-width:calc(50% - 30px);
+    }
+}
+
+@media (max-width:992px) {
+    .container{
+        max-width: 750px;
+    }
+    .slide{
+        padding: 60px;
+    }
+    .delivery-card{
+        width:calc(50% - 30px) ;
+    }
+    .footer-logo
+    {
+        margin-right: 30px;
+    }
+    .advantege-card{
+        max-width: calc(50% - 36px);
+    }
+}
+
+@media (max-width:768px) {
+    .container{
+        max-width: 560px;
+    }
+    .header
+    {
+        flex-wrap: wrap;
+    }
+    .search-form
+    {
+        order: 6;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+    .promo
+    {
+        flex-wrap: wrap;
+    }
+    .advantege-cards{
+        flex-wrap: wrap;
+    }
+}
+@media (max-width:576px) {
+    .container{
+        max-width: 90%;
+    }
+    .tabs-card
+    {
+        max-width: 100%;
+    }
+    .delivery-card{
+        width:100% ;
+    }
+    .advantege-card{
+        max-width: 100%;
+    }
+    .footer-logo
+    {
+        width: 100px;
+        margin-right: 15px;
+    }
+    .social-link {
+        margin-left: 10px;
+    }
+    .slide{
+        padding-bottom: 80px;
+        padding-top: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .slider-buttons
+    {
+        bottom: 10px;
+        right: 20px;
+    }
+
 }
